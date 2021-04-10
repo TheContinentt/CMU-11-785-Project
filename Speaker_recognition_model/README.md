@@ -1,0 +1,2 @@
+We are builing our speaker recognition part model based on the research: https://github.com/mravanelli/SincNet.
+Our model would be build and revised based on its main structure and hyperparameter settings.
