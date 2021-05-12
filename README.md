@@ -36,6 +36,11 @@ cd Speaker_recognition_model_text
 python generate_trainvaltest_fairseq.py
 python train.py
 ```
-
+### Multimodal Fusion
+Once we have speaker classification predictions from audio and text branches, we can run multimodal fusion by:
+```
+cd Speaker_recognition_model_text
+python fusion.py
+```
 ### Citation
 The code is based on this [Github repo](https://github.com/FernandoLpz/Text-Classification-CNN-PyTorch) and [Github repo](https://github.com/mravanelli/SincNet)
