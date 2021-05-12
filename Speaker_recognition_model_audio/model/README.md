@@ -2,9 +2,9 @@
 The speaker recognition model (audio branch) folder contains code for running audio-based speaker recognition model.
 Generate data splits using ground truth texts and train model:
 1. go to Speaker_recognition_model_audio/Preprocessing directory
-2. Upload Preprocessing.ipynb and TIMIT_labels.npy to Google Colab
+2. Upload Preprocessing.ipynb to Google Colab
 3. Upload train.txt and test.txt to /content/gdrive/MyDrive/knnw folder of Google drive using same Google account
-4. Upload id_speaker.txt, knnw_en_sub.csv and knnw_en_mono.wav to /content/gdrive/MyDrive/knnw folder of Google drive using same Google account
+4. Upload knnw_en_sub.csv and knnw_en_mono.wav to /content/gdrive/MyDrive/knnw folder of Google drive using same Google account
 5. Connect running instance in Preprocessing.ipynb to Google Drive and run through this file.
 6. Data splits are generated in Google Drive directory: /content/gdrive/MyDrive/knnw/data
 7. download TIMIT_train.scp, TIMIT_test.scp and TIMIT_all.scp to Speaker_recognition_model_audio/model/data_lists folder
