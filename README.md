@@ -80,4 +80,4 @@ cd Speaker_recognition_model_text
 python fusion.py
 ```
 ### Citation
-The code is based on this [Github repo](https://github.com/FernandoLpz/Text-Classification-CNN-PyTorch) and [Github repo](https://github.com/mravanelli/SincNet)
+The code is based on this [Github repo](https://github.com/FernandoLpz/Text-Classification-CNN-PyTorch), [Github repo](https://github.com/mravanelli/SincNet), [Github repo](https://github.com/pytorch/fairseq) and [Github repo](https://github.com/SeanNaren/deepspeech.pytorch)
