@@ -1,5 +1,5 @@
-# CMU-11-785-Project
-Final Project for 11-785 SP2021
+# MMSR: A Novel Multi-Modal Fusion Method For Speaker Recognition
+In this project, we study the problem of speaker recognition and caption generation. Given an audio recording, we want to classify its speaker labels. We propose a novel multi-modal fusion method, which utilizes both audio and text features to perform robust speaker recognition. We empirically validate our model effectiveness on the KNNW dataset. Our experiment shows that our proposed method, namely MMSR, can achieve better classification performance compared to the single-modality models.
 
 
 ### Speech Recognition Models
