@@ -36,6 +36,42 @@ cd Speaker_recognition_model_text
 python generate_trainvaltest_fairseq.py
 python train.py
 ```
+
+### Speech Recognition Models
+The speech recognition model folder contains code for running two speech recognition models (DeepSpeech2 and Fairseq S2T).
+Before training the model, we need to generate data splits:
+1. First you need to create a folder for KNNW data, and move knnw_en_sub.csv and knnw_en_mono.wav into the folder.
+```
+cd Speech_recognition/data_preprocessing
+mkdir knnw
+```
+2. Then you need to run data_preprocessing.py to generate wav files and tsv files for training.
+```
+cd Speech_recognition
+python data_preprocessing.py
+```
+3. To train DeepSpeech2 model,
+```
+cd Speech_recognition/deepspeech2
+pip3 install -r requirements.txt
+python deep_speech.py
+```
+4. To train Fairseq-S2T model,
+```
+cd Speech_recognition/fairseq-s2t
+python train.py $DIR_FOR_PREPROCESSED_DATA --save-dir $MODEL_PATH --max-epoch 80 --task speech_recognition --arch vggtransformer_2 --optimizer adadelta --lr 1.0 --adadelta-eps 1e-8 --adadelta-rho 0.95 --clip-norm 10.0  --max-tokens 5000 --log-format json --log-interval 1 --criterion cross_entropy_acc --user-dir examples/speech_recognition/
+```
+5. To evaluate the result on averaged Levenshtein distance,
+```
+cd Speech_recognition
+python evaluation.py
+```
+6. (Optional) To use Google API for speech recognition (as reference):
+```
+cd Speech_recognition
+python GoogleAPI-speech_recognition
+```
+
 ### Multimodal Fusion
 Once we have speaker classification predictions from audio and text branches, we can run multimodal fusion by:
 ```
